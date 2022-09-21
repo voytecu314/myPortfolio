@@ -1,0 +1,20 @@
+.content-components {
+    height: 100vh;
+}
+
+.content-components:first-child {
+    height: 80vh;
+}
+
+@media screen and (min-height: 700px) {
+
+    #contacts {
+        height: fit-content;
+    }
+
+    .c-glitch-image {
+        width: 40vw;
+        height: 20vh;
+    }
+
+}

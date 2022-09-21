@@ -1,0 +1,44 @@
+#home-menu {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    color: aliceblue;
+    transition: top 1s ease-out;
+}
+
+#home-menu a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#home-menu a:visited {
+    color: aliceblue;
+}
+
+#home-menu > li:hover a {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+@media screen and (max-width: 800px) {
+    
+   
+    #home-menu li:nth-child(1) {
+        transform: translateY(-300%);
+    }
+	
+    #home-menu li:nth-child(2) {
+        transform: translateY(-150%);
+    }
+
+    #home-menu li:nth-child(4) {
+        transform: translateY(150%);
+    }
+
+    #home-menu li:nth-child(5) {
+        transform: translateY(300%);
+    }
+}

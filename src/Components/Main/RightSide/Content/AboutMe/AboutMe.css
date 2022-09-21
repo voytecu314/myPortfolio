@@ -1,0 +1,181 @@
+#AboutMe {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #111;
+}
+
+#side {
+    position: relative;
+}
+
+#side-nav {
+    position: absolute;
+    width: 200px;
+    height: 33%;
+    transition: left 1s;
+    z-index: 999;
+}
+
+#strap {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    right: -15%;
+    width: 15%;
+    height: 10%;
+    cursor: pointer;
+}
+
+#strap > span {
+    font-size: 2rem;
+    color: aliceblue;
+}
+
+#aboutme-menu {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    background-color: darkcyan;
+    text-align: center;
+    color: aliceblue;
+}
+
+#aboutme-menu a, #aboutme-menu a:visited {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#aboutme-menu > li:hover a {
+    border-bottom: 1px solid aliceblue;
+}
+
+.sides {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.insides {
+    display: grid;
+    width: 80%;
+    height: 100%;
+}
+
+.triangles {
+    position: relative;
+    width: 210%;
+    height: 200%;
+    transform-origin: 50% 50%;
+    transform: rotateZ(-47deg);
+    transition: opacity 1s, left 1s, right 1s;
+}
+
+.triangles:hover {
+    opacity: 0.5;
+}
+
+.triangles:first-child {
+    display: grid;
+    right: 100%;
+    place-items: center;
+    background-color: #490910;
+    translate: -53% -30%;
+}
+
+.triangles:nth-child(2) {
+    left: 100%;
+    top: -3%;
+    text-align: center;
+    background-color: #095016;
+    translate: 0% -17%;
+}
+
+.show:nth-child(1){
+    right: 0%;
+}
+
+.show:nth-child(2){
+    left: 0%;
+}
+
+.triangles svg {
+    transform: rotateZ(47deg);
+    translate: 10% 30%;
+}
+
+.triangles h2 {
+    transform: rotateZ(47deg);
+    translate: 10% 250%;
+}
+
+.triangles:hover svg {
+    color: aliceblue;
+}
+
+@media screen and (max-width: 1650px) {
+
+    .triangles:first-child {
+        translate: -53% -47%;
+    }
+
+    .triangles:nth-child(2) {
+        translate: 2% -15%;
+    }
+
+    .triangles:first-child > div {
+        translate: -20%;
+    }
+
+}
+
+@media screen and (max-width: 1360px) {
+    #AboutMe {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #aboutme-menu {
+        height: 200%;
+    }
+
+    .sides {
+        flex-basis: 100%
+    }
+
+    #strap {
+        top: 100%;
+    }
+
+    .triangles {
+        width: 210%;
+        height: 200%;
+        transform-origin: 50% 50%;
+        transform: rotateZ(-7deg);
+    }
+    
+    .triangles:first-child {
+        translate: -40% -47%;
+    }
+    
+    .triangles:nth-child(2) {
+        translate: -6% -6%;
+    }
+
+    .triangles svg {
+        translate: 0 50%;
+        rotate: -40deg;
+    }
+
+    .triangles h2 {
+        translate: 0 180%;
+        rotate: -40deg;
+    }
+
+    .triangles:nth-child(2) > div {
+        translate: 0 -15%;
+    }
+}
